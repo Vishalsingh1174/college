@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ★ APNA NAAM: title aur description badlo -->
+<title>vishal portfolio | Web Developer</title>
+<meta name="description" content="Portfolio of Your Name, web developer based in Mumbai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- CSS aur JS files yahan link hain (teeno files ek hi folder mein rakho) -->
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<!-- ============ NAVBAR ============ -->
+<nav>
+  <div class="wrap">
+    <a href="#home" class="logo">VISHAL SINGH <span></span></a> <!-- ★ APNA NAAM -->
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul id="menu">
+      <!-- href="#about" ka matlab: click karne par page smoothly id="about" wale section tak scroll hoga -->
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact" class="cta">Hire me</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HOME / HERO ============ -->
+<header class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="role">Full-Stack Web Developer</span> <!-- ★ APNA ROLE -->
+      <h1>Hi, I'm Vishal Singh.<br>I build fast, reliable websites.</h1> <!-- ★ VISHAL SINGH -->
+      <p class="lead"><h3>I'm a 2nd Year student interested in understanding problems and turning ideas into useful software.</h3>I'm a developer based in Mumbai. I design and build responsive web apps, from clean interfaces to the backend that powers them.</p> <!-- ★ APNI INTRO -->
+      <a href="#projects" class="btn primary">View my projects</a>
+      <!-- ★ RESUME: apni PDF file ka naam yahan likho (resume.pdf folder mein rakho) -->
+      <a href="resume.pdf" download class="btn secondary">Download resume</a>
+      <div class="social">
+        <!-- ★ APNE SOCIAL LINKS -->
+        <a href="https://github.com/Vishalsingh1174" target="_blank" aria-label="LinkedIn">GitHub</a>
+        <a href="https://www.linkedin.com/in/vishal-singh-5b4051362?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+
+    <!-- ★★★ YAHAN APNI PHOTO LAGAO ★★★
+         1. Apni photo ko "images" folder mein "photo.jpg" naam se rakho.
+         2. Best result ke liye square (barabar width-height) photo use karo.
+         3. Photo na mile to "YN" initials dikhenge. Initials bhi badal lena. -->
+    <div class="photo-box">
+      <span class="initials">YN</span>
+      <img src="1768995139049.jpg" alt="VISHAL SINGH">
+    </div>
+  </div>
+</header>
+
+<!-- ============ ABOUT ============ -->
+<section id="about">
+  <div class="wrap">
+    <div class="head"><h2>About me</h2><p>Programmer .</p></div>
+    <div class="panel about">
+      <div>
+        <!-- ★ APNE BAARE MEIN likho -->
+        <p>I'm a web developer who cares about clean code and a smooth user experience. I take a project from idea to launch: planning, design, development, and testing.</p>
+        <p>I work well in teams and on my own, and I keep learning new tools so my work stays modern and easy to maintain. Outside of coding I enjoy cricket, design, and travelling.</p>
+        <!-- ★ PERSONAL DETAILS -->
+        <ul class="info">
+          <li><b>Name</b><span>Vishal Singh</span></li>
+          <li><b>Date of birth</b><span>12/01/2004</span></li>
+          <li><b>Location</b><span>Mumbai, Maharashtra, India</span></li>
+          <li><b>Email</b><span>vs2277151@gmail.com</span></li>
+          <li><b>Phone</b><span>+91 6388921174</span></li>
+          <li><b>Languages</b><span>English, Hindi, Marathi, Bhojpuri </span></li>
+        </ul>
+      </div>
+      <!-- ★ APNE NUMBERS (sachche rakho, ya hata do) -->
+      <div class="stats">
+        <div class="stat"><b>3</b><span>Projects completed</span></div>
+        <div class="stat"><b>1 yrs</b><span>Experience</span></div>
+       <!-- <div class="stat"><b>10+</b><span>Happy clients</span></div>-->
+        <div class="stat"><b>5+</b><span>Certificates</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EDUCATION ============ -->
+<section class="band" id="education">
+  <div class="wrap">
+    <div class="head"><h2>Education</h2><p>My academic background.</p></div>
+    <div class="grid">
+      <!-- ★ APNI PADHAI (har card ek degree/school hai; copy-paste karke aur add kar sakte ho) -->
+        <article class="card pad">
+        <span class="when">2019</span>
+        <h3>Secondary School (10th)</h3>
+        <p class="org">St joseph school</p>
+        <p>Percentage: 60%.</p>
+      </article>
+
+      
+      <article class="card pad">
+        <span class="when">2019 – 2021</span>
+        <h3>Higher Secondary (12th), Science</h3>
+        <p class="org">Nation Institute of Open Schooling</p>
+        <p>Percentage: 85%. Main subjects: Physics, Chemistry, Biology, English.</p>
+      </article>
+
+      <article class="card pad">
+        <span class="when">2021 – 2024</span>
+        <h3>Bachelor's in computer application</h3>
+        <p class="org">Thakur Shyam Narayan Degree College</p>
+        <p>CGPA / Percentage: 8.5 / 10. Studied data structures, databases, and web development.</p>
+      </article>
+     
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="head"><h2>Experience</h2><p>Where I've worked and what I did there.</p></div>
+    <div class="panel">
+      <ul class="timeline">
+        <!-- ★ APNA EXPERIENCE (naya add karna ho to ek <li> copy karo) -->
+        <li>
+          <span class="when">2025 – Present</span>
+          <h3>Frontend Developer</h3>
+          <p class="org">Company Name, Mumbai</p>
+          <p>Build and maintain responsive interfaces in React and improve page speed across client websites.</p>
+        </li>
+        <li>
+          <span class="when">2024 – 2025</span>
+          <h3>Web Development Intern</h3>
+          <p class="org">Company Name</p>
+          <p>Worked on landing pages and internal tools, and fixed bugs reported by users.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="band" id="skills">
+  <div class="wrap">
+    <div class="head"><h2>Skills</h2><p>The tools and technologies I use most.</p></div>
+    <div class="skills-grid">
+      <div class="panel">
+        <h3>Technical skills</h3>
+        <!-- ★ data-level = kitne % aata hai (0 se 100). Bar scroll karne par apne aap bharega -->
+        <div class="bar"><div class="bar-top"><span>HTML &amp; CSS</span><span>90%</span></div><div class="track"><i data-level="90"></i></div></div>
+         <div class="bar"><div class="bar-top"><span>MySQL</span><span>85%</span></div><div class="track"><i data-level="85"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>JavaScript</span><span>80%</span></div><div class="track"><i data-level="80"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>React</span><span>75%</span></div><div class="track"><i data-level="75"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>Node.js</span><span>70%</span></div><div class="track"><i data-level="70"></i></div></div>
+        <div class="bar"><div class="bar-top"><span>Python</span><span>65%</span></div><div class="track"><i data-level="65"></i></div></div>
+      </div>
+      <div class="panel">
+        <h3>Tools</h3>
+        <div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Figma</span><span class="tag">MySQL</span><span class="tag">MongoDB</span><span class="tag">Postman</span><span class="tag"> MsExcel</span><span class="tag">Microsoft office</span></div>
+        <h3 class="gap">Soft skills</h3>
+        <div class="tags"><span class="tag">Teamwork</span><span class="tag">Communication</span><span class="tag">Problem solving</span><span class="tag">Time management</span> <span class="tag">Quick learner</span> </div>
+      
+       <h3 class="gap">Programming langusage</h3>
+        <div class="tags"><span class="tag">C</span><span class="tag">C++</span><span class="tag">python</span><span class="tag">sql</span> <span class="tag">Java</span> </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="head"><h2>Projects</h2><p>A few things I've built recently.</p></div>
+    <!-- Filter buttons: data-filter card ke data-cat se match hota hai -->
+    <div class="filters">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="web">Web</button>
+      <button class="chip" data-filter="app">App</button>
+    </div>
+    <div class="grid" id="project-grid">
+      <!-- ★ APNE PROJECTS. data-cat="web" ya "app". Project ki photo lagani ho to .thumb ke andar <img src="images/project1.jpg" alt=""> daal do -->
+      <article class="card" data-cat="web">
+         
+        <div class="thumb">Amazon clone  <img src="Screenshot 2026-07-17 215328.jpg" alt=""></div>
+             <div class="body">
+          <h3>Amazon clone website</h3>
+          <p>Online shop with product search, cart, and secure checkout.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span></div>
+          <div class="links"><a href="#">Live demo</a><a href="https://github.com/Vishalsingh1174/college.git">Source code</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="app">
+        <div class="thumb t2">TIC TAC TOE GAME  <img src=" tic tac toe demo pic.jpg" alt=""></div>
+        <div class="body">
+          <h3>Playing tic tac to game</h3>
+          <p>Hear you can  play the game online with friends with the cross (*) symbol and plus (+) symbol.</p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          <div class="links"><a href="#">Live demo</a><a href="https://github.com/Vishalsingh1174/Tic-tac-too.git">Source code</a></div>
+        </div>
+      </article>
+      <article class="card" data-cat="web">
+        <div class="thumb t3">Birthday wish website  <img src=" birthday demo pic.jpg" alt=""></div>
+        <div class="body">
+          <h3>Birthday website</h3>
+          <p>it is the birthday website to wish your friends family member and  coloigs </p>
+          <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+          <div class="links"><a href="#">Live demo</a><a href="#">Source code</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATES & ACHIEVEMENTS ============ -->
+<section class="band" id="achievements">
+  <div class="wrap">
+    <div class="head"><h2>Certificates &amp; achievements</h2><p>Courses completed and recognition received.</p></div>
+    <div class="grid">
+      <!-- ★ APNE CERTIFICATES / ACHIEVEMENTS -->
+      <article class="card pad"><span class="when">2025</span><h3>Full-Stack Web Development</h3><p class="org">Course platform name</p></article>
+      <article class="card pad"><span class="when">2024</span><h3>JavaScript Algorithms</h3><p class="org">Course platform name</p></article>
+      <article class="card pad"><span class="when">2024</span><h3>Hackathon Finalist</h3><p class="org">Event name</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Let's work together</h2>
+      <p>I'm open to full-time roles, freelance projects, and collaborations. Send me a message and I'll reply within a day.</p>
+      <!-- ★ APNI CONTACT DETAILS -->
+      <ul class="contact-list">
+        <li><span>Email</span><a href="mailto:you@example.com">vs2277151@gmail.com</a></li>
+        <li><span>Phone</span><a href="tel:+910000000000">+91 6388921174</a></li>
+        <li><span>Location</span><span>Mumbai, India</span></li>
+      </ul>
+    </div>
+    <!-- Contact form: bharke "Send" dabane par email app khulegi (script.js mein ★ email badalna mat bhoolna) -->
+    <form id="contact-form" novalidate>
+      <label>Your name<input type="text" id="name" placeholder="Enter your name"></label>
+      <label>Your email<input type="email" id="email" placeholder="Enter your email"></label>
+      <label>Message<textarea id="message" rows="4" placeholder="How can I help you?"></textarea></label>
+      <p id="form-msg" role="alert"></p>
+      <button type="submit" class="btn primary">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>&copy; <span id="year">2026</span> Vishal Singh. All rights reserved.</footer>
+
+<!-- Upar jaane ka button -->
+<button id="to-top" aria-label="Back to top">&uarr;</button>
+
+</body>
+</html>

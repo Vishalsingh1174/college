@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NIGHT SKY ================= -->
+
+    <div class="stars"></div>
+    <div class="stars stars-two"></div>
+
+    <div class="moon"></div>
+
+    <!-- Floating Stars -->
+    <div class="star s1">✦</div>
+    <div class="star s2">✦</div>
+    <div class="star s3">✦</div>
+    <div class="star s4">✧</div>
+    <div class="star s5">✦</div>
+    <div class="star s6">✧</div>
+    <div class="star s7">✦</div>
+    <div class="star s8">✧</div>
+
+
+    <!-- Extra floating hearts -->
+    <div class="sky-heart h1">♥</div>
+    <div class="sky-heart h2">♥</div>
+    <div class="sky-heart h3">♥</div>
+    <div class="sky-heart h4">♥</div>
+
+
+    <!-- ================= MAIN WEBSITE ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= STEP 1 ================= -->
+
+        <section id="step1" class="step active">
+
+            <div class="welcome-badge">
+                ✨ A Little Birthday Surprise ✨
+            </div>
+
+            <div class="heart">
+
+                <div class="heart-content">
+
+                    <div class="small-heart">♥</div>
+
+                    <h1>Happy Birthday</h1>
+
+                    <p>
+                        A little surprise is waiting
+                        for someone very special...
+                    </p>
+
+                    <div class="small-heart">♥</div>
+
+                </div>
+
+            </div>
+
+
+            <h2>🎂 Whose Birthday Is It?</h2>
+
+            <p class="question">
+                Choose who you are creating this surprise for
+            </p>
+
+
+            <div class="options">
+
+                <button onclick="selectPerson('Sister')">
+                    👧 Sister
+                </button>
+
+                <button onclick="selectPerson('Brother')">
+                    👦 Brother
+                </button>
+
+                <button onclick="selectPerson('Friend')">
+                    ❤️ Friend
+                </button>
+
+                <button onclick="selectPerson('Mom')">
+                    👩 Mom
+                </button>
+
+                <button onclick="selectPerson('Dad')">
+                    👨 Dad
+                </button>
+
+                <button onclick="selectPerson('Other')">
+                    ✨ Other
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= STEP 2 ================= -->
+
+        <section id="step2" class="step">
+
+            <div class="emoji-big">
+                💖
+            </div>
+
+            <h1>
+                Beautiful Choice!
+            </h1>
+
+            <p id="personText">
+                Now tell me their name...
+            </p>
+
+
+            <div class="input-box">
+
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Enter their name..."
+                    maxlength="30"
+                >
+
+                <button onclick="submitName()">
+                    Continue ✨
+                </button>
+
+            </div>
+
+
+            <button
+                class="back-btn"
+                onclick="goBack(2)"
+            >
+                ← Go Back
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= STEP 3 ================= -->
+
+        <section id="step3" class="step">
+
+            <div class="emoji-big">
+                🎁
+            </div>
+
+            <h1>
+                One Last Choice...
+            </h1>
+
+            <p>
+                What kind of birthday wish should it be?
+            </p>
+
+
+            <div class="message-options">
+
+                <button onclick="selectStyle('cute')">
+                    🥰 Cute & Sweet
+                </button>
+
+                <button onclick="selectStyle('emotional')">
+                    💖 Emotional
+                </button>
+
+                <button onclick="selectStyle('funny')">
+                    😂 Fun & Funny
+                </button>
+
+                <button onclick="selectStyle('special')">
+                    ✨ Extra Special
+                </button>
+
+            </div>
+
+
+            <button
+                class="back-btn"
+                onclick="goBack(3)"
+            >
+                ← Go Back
+            </button>
+
+        </section>
+
+
+
+        <!-- ================= FINAL ================= -->
+
+        <section id="final" class="step">
+
+            <div class="final-subtitle">
+                ✨ Someone special deserves a special wish ✨
+            </div>
+
+
+            <div class="final-heart">
+
+                <div class="heart-sparkle sparkle1">✦</div>
+                <div class="heart-sparkle sparkle2">✧</div>
+                <div class="heart-sparkle sparkle3">✦</div>
+                <div class="heart-sparkle sparkle4">✧</div>
+
+
+                <div class="final-content">
+
+
+                    <!-- PHOTO -->
+
+                    <div class="birthday-photo">
+
+                        <div class="photo-ring"></div>
+
+                        <img
+                            src="roma half.jpeg"
+                            alt="Birthday Photo"
+                        >
+
+                        <div class="photo-sparkle ps1">✦</div>
+                        <div class="photo-sparkle ps2">✧</div>
+                        <div class="photo-sparkle ps3">✦</div>
+
+                    </div>
+
+
+                    <div class="floating-heart">
+                        ♥
+                    </div>
+
+
+                    <p class="final-small">
+                        ✨ A special wish for you ✨
+                    </p>
+
+
+                    <h1 id="finalTitle">
+                        Happy Birthday!
+                    </h1>
+
+
+                    <h2 id="finalName">
+                        Name
+                    </h2>
+
+
+                    <p id="finalMessage">
+                        May your life always be filled
+                        with happiness and love.
+                    </p>
+
+
+                    <div class="cake">
+                        🎂
+                    </div>
+
+
+                    <p class="final-ending">
+                        Keep smiling.
+                        Keep shining.
+                        Keep being amazing. 💖
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="wish-text">
+                🌟 Make a wish 🌟
+            </div>
+
+
+            <button
+                class="wish-btn"
+                onclick="makeWish()"
+            >
+                💫 Make A Wish 💫
+            </button>
+
+
+            <button
+                class="restart-btn"
+                onclick="restart()"
+            >
+                🔄 Create Another Surprise
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= EFFECT CONTAINERS ================= -->
+
+    <div id="confetti"></div>
+
+    <div id="particles"></div>
+
+    <div id="wishExplosion"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

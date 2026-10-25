@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+  FILE 1: index.html
+  This file is only the STRUCTURE (skeleton) of the page.
+  - style.css  decides how it LOOKS (colours, lift design)
+  - script.js  decides how it WORKS (buttons, lift movement)
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>4 Lift Building Project</title>
+
+  <!-- Connect the CSS file (design) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Page heading and short instruction -->
+  <h1>🏢 4 Lift Building System</h1>
+  <p class="sub">Press a floor button on the left – the nearest free lift comes. Then press a floor button under that lift.</p>
+
+  <!-- This red message is hidden by script.js. If you can SEE it, script.js did not load
+       (buttons and lifts are created by script.js, so they will be missing) -->
+  <p id="warn" style="background:#c0392b;padding:10px;border-radius:8px;max-width:700px;margin:0 auto 15px">
+    ⚠ script.js did not load. Keep index.html, style.css and script.js in the SAME folder with these exact names.
+  </p>
+
+  <!-- The whole building: call buttons on the left + 4 lifts on the right -->
+  <div class="building">
+
+    <!-- Floor call buttons (empty here, script.js creates them) -->
+    <div class="calls" id="calls"></div>
+
+    <!-- The 4 lifts with their wires and button panels (script.js creates them) -->
+    <div class="lifts" id="lifts"></div>
+  </div>
+
+  <!-- Activity log: shows messages like "Lift 2 is coming" -->
+  <div class="log" id="log"><b>Activity log</b></div>
+
+  <!-- Connect the JavaScript file (logic). It is at the bottom so the page loads first -->
+  <script src="script.js"></script>
+</body>
+</html>

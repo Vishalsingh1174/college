@@ -1,0 +1,133 @@
+/* =====================================================
+   FILE 2: style.css
+   All colours, sizes and the lift design are in this file.
+   ===================================================== */
+
+/* ---------- Variables (change here to resize the building) ---------- */
+:root {
+  --floor-h: 90px;   /* height of one floor (must match FLOOR_H in script.js) */
+  --floors: 6;       /* number of floors (must match FLOORS in script.js) */
+}
+
+/* Make width/height include padding and border (easier sizing) */
+* { box-sizing: border-box; }
+
+/* ---------- Page background and text ---------- */
+body {
+  margin: 0; padding: 20px; min-height: 100vh;
+  font-family: Arial, sans-serif; color: #fff; text-align: center;
+  background: linear-gradient(#1e3c72, #2a5298);   /* blue gradient */
+}
+/* On small screens (phone) the building scrolls sideways instead of hiding buttons */
+body { overflow-x: auto; }
+h1 { margin: 0 0 5px; }
+.sub { margin: 0 0 20px; color: #cfe0ff; }
+
+/* ---------- The building (grey box that holds everything) ---------- */
+.building {
+  display: inline-flex; gap: 20px; align-items: flex-start;
+  background: #34495e; padding: 20px; border-radius: 12px;
+  border: 4px solid #1b2631; box-shadow: 0 10px 30px rgba(0,0,0,.5);
+}
+
+/* ---------- Call buttons on the left side ---------- */
+/* column-reverse puts the top floor (5) at the top and Ground at the bottom */
+.calls { display: flex; flex-direction: column-reverse; margin-top: 30px; }
+
+/* One row per floor, same height as the floor in the shaft so they line up */
+.call-row { height: var(--floor-h); display: flex; align-items: center; gap: 8px; }
+.call-row span { width: 55px; text-align: right; font-weight: bold; }
+
+/* Round grey call button */
+.call-btn {
+  width: 38px; height: 38px; border-radius: 50%; border: 3px solid #bdc3c7;
+  background: #7f8c8d; color: #fff; cursor: pointer; font-size: 16px;
+}
+.call-btn:hover { background: #95a5a6; }               /* lighter when mouse is over it */
+.call-btn.lit { background: #f39c12; border-color: #f1c40f; box-shadow: 0 0 10px #f1c40f; } /* glows orange when pressed */
+
+/* ---------- The 4 lifts ---------- */
+.lifts { display: flex; gap: 18px; }       /* space between the 4 lifts */
+.lift-col { width: 110px; }                /* one lift = shaft + panel */
+.lift-title { margin-bottom: 4px; font-weight: bold; color: #f1c40f; }
+
+/* Motor box on top of each shaft (where the wire is pulled from) */
+.motor {
+  height: 26px; background: #566573; border-radius: 6px 6px 0 0;
+  border: 2px solid #1b2631; display: flex; justify-content: center; align-items: center;
+}
+.motor i { width: 16px; height: 16px; border-radius: 50%; background: #e74c3c; display: block; } /* red wheel */
+
+/* Shaft = the dark tunnel in which the lift moves up and down */
+.shaft {
+  position: relative;                                   /* lift car is placed inside it */
+  height: calc(var(--floor-h) * var(--floors));         /* total height = floors x floor height */
+  overflow: hidden;                                     /* hide the wire that goes above the shaft */
+  background:
+    /* thin dark line at every floor level */
+    repeating-linear-gradient(to top, transparent 0, transparent calc(var(--floor-h) - 3px),
+                              #1b2631 calc(var(--floor-h) - 3px), #1b2631 var(--floor-h)),
+    #212f3d;                                            /* dark blue-grey wall */
+  border: 2px solid #1b2631;
+}
+
+/* ---------- The lift car (red box that moves) ---------- */
+.car {
+  position: absolute; left: 15px; width: 80px; height: 74px;
+  background: linear-gradient(#e74c3c, #c0392b);        /* red body */
+  border: 3px solid #7b241c; border-radius: 6px;
+  transition-property: bottom;                          /* animate ONLY the up/down movement */
+  transition-timing-function: linear;                   /* constant speed (duration is set by JS) */
+}
+
+/* Steel wire: a long thin line above the car. It moves with the car. */
+.cable {
+  position: absolute; bottom: 100%;                     /* starts at the top of the car */
+  left: 50%; width: 4px; height: 700px; margin-left: -2px;
+  /* silver / grey stripes to look like twisted wire */
+  background: repeating-linear-gradient(to top, #bdc3c7 0, #bdc3c7 4px, #7f8c8d 4px, #7f8c8d 8px);
+}
+
+/* Yellow inside of the lift (visible when doors open) */
+.inside { position: absolute; inset: 0; background: #f7dc6f; overflow: hidden; }
+
+/* Two sliding doors (left and right), each covers half of the car */
+.door {
+  position: absolute; top: 0; bottom: 0; width: 50%;
+  background: linear-gradient(#aab7b8, #85929e);        /* metal grey */
+  border: 1px solid #566573;
+  transition: transform 1s;                             /* smooth opening/closing (1 second) */
+}
+.door.l { left: 0; }
+.door.r { right: 0; }
+
+/* When JS adds the class "open", doors slide outwards */
+.car.open .door.l { transform: translateX(-100%); }
+.car.open .door.r { transform: translateX(100%); }
+
+/* ---------- Button panel under each lift ---------- */
+.panel { margin-top: 6px; background: #1b2631; padding: 8px; border-radius: 8px; }
+
+/* Green digital screen that shows the current floor */
+.display {
+  background: #000; color: #2ecc71; font: bold 22px monospace;
+  padding: 4px; border-radius: 4px; margin-bottom: 6px;
+}
+
+/* Floor buttons arranged in 3 columns */
+.btns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.btn {
+  padding: 10px 0; font-size: 15px; border: 2px solid #bdc3c7; border-radius: 6px;
+  background: #7f8c8d; color: #fff; font-weight: bold; cursor: pointer;
+}
+.btn:hover { background: #95a5a6; }
+.btn.lit { background: #f39c12; border-color: #f1c40f; box-shadow: 0 0 8px #f1c40f; } /* selected floor glows */
+
+/* ---------- Activity log box ---------- */
+.log {
+  margin: 20px auto 0; max-width: 700px; text-align: left;
+  background: rgba(0,0,0,.35); padding: 10px 15px; border-radius: 8px;
+  height: 150px; overflow-y: auto;                      /* scroll when many messages */
+  font-size: 14px;
+}
+.log div { padding: 2px 0; }
